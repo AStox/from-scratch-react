@@ -1,8 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { act } from "react-dom/test-utils";
 
-import MatchupDisplay from "./matchupDisplay";
+import MatchupDisplay from "./MatchupDisplay";
 
 it("renders with two arrays", () => {
   const { getByText } = render(<MatchupDisplay roster1={["one"]} roster2={["two"]} />);

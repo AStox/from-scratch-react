@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import './MatchupDislay.css';
+
 const randomChoose = (charList: string[]) => {
   return charList[Math.floor(Math.random() * charList.length)];
 };
@@ -14,14 +16,15 @@ const MatchupDisplay = ({ roster1, roster2 }: { roster1: string[]; roster2: stri
   };
 
   return (
-    <>
-      <div>
-        {choice1}
-        {" VS "}
-        {choice2}
-      </div>
-      <button type='button' onClick={randomize}>Again</button>
-    </>
+    <div className="MatchupDisplay">
+      <button className="full-button" type="button" onClick={randomize}>
+        <div>
+          <h1>{choice1}</h1>
+          <h1>{" VS "}</h1>
+          <h1>{choice2}</h1>
+        </div>
+      </button>
+    </div>
   );
 };
 

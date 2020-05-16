@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
-import MainContent from "./mainContent";
+import Main from "./main";
 
 import "./App.css";
 
@@ -9,7 +9,9 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <MainContent />
+        <Route exact path="/">
+          <Main />
+        </Route>
       </div>
     </Router>
   );
