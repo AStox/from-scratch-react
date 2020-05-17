@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import './MatchupDislay.css';
+import './MatchupDisplay.sass';
 
 const randomChoose = (charList: string[]) => {
   return charList[Math.floor(Math.random() * charList.length)];

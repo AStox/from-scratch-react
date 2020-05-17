@@ -7,7 +7,7 @@
     "build": "webpack",
     "start": "webpack-dev-server --hot --inline",
     "test": "jest",
-    "lint": "eslint src/**/*.js src/**/*.tsx"
+    "lint": "eslint src/**/*.js src/**/*.tsx & sass-lint src/**/*.scss src/**/*.sass"
   },
   "author": "",
   "license": "ISC",
@@ -46,10 +46,18 @@
     "css-loader": "^3.5.3",
     "eslint-config-prettier": "^6.11.0",
     "prettier": "^2.0.5",
+    "sass": "^1.26.5",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^8.0.2",
     "style-loader": "^1.2.0",
     "ts-loader": "^7.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
