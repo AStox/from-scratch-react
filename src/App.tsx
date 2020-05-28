@@ -8,10 +8,11 @@ import ToDo from "./ToDo";
 
 import { stox, steve } from "./Lists";
 
-const App = () => {
-  const [roster1, setRoster1] = useState(stox);
-  const [roster2, setRoster2] = useState(steve);
+import './App.sass'
 
+const App = () => {
+  const roster1 = stox;
+  const roster2 = steve;
   const formatList = (list: string) => list.split(",");
 
   const toDoItems = ["server", "database", "bulma"];
@@ -24,8 +25,6 @@ const App = () => {
             <Link to="/">Back</Link>
           </Route>
           <Route exact path="/">
-            <RosterInput value={roster1} onChange={setRoster1} />
-            <RosterInput value={roster2} onChange={setRoster2} />
             <MatchupDisplay roster1={formatList(roster1)} roster2={formatList(roster2)} />
             <Link to="/todo">todo</Link>
           </Route>

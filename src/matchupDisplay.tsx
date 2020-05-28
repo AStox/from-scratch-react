@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-import './MatchupDisplay.sass';
+import VersusBar from "./VersusBar";
+
+import "./MatchupDisplay.sass";
 
 const randomChoose = (charList: string[]) => {
   return charList[Math.floor(Math.random() * charList.length)];
@@ -17,13 +19,17 @@ const MatchupDisplay = ({ roster1, roster2 }: { roster1: string[]; roster2: stri
 
   return (
     <div className="MatchupDisplay">
-      <button className="full-button" type="button" onClick={randomize}>
-        <div>
-          <h1>{choice1}</h1>
-          <h1>{" VS "}</h1>
-          <h1>{choice2}</h1>
+      <div className="full-button" role="button" onClick={randomize}>
+        <div className="top-left name-container">
+          <h1 className="name">{choice1}</h1>
         </div>
-      </button>
+        <VersusBar>
+          <h1 className="name">{" VS "}</h1>
+        </VersusBar>
+        <div className="bottom-right name-container">
+          <h1 className="name">{choice2}</h1>
+        </div>
+      </div>
     </div>
   );
 };
