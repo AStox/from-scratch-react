@@ -7,33 +7,22 @@ $blank: ''
   width: 100%
   position: absolute
 
-  .top, &:after, &:before
-    background: v.$yellow1
-
-  .middle
-    z-index: 2
-    background: v.$yellow5
-
-  .bottom
-    background: v.$green1
 
   .bar
     height: 1rem
+    width: 100%
+    transform: skew(0deg, -6deg)
 
-    &:after 
-      position: absolute
-      top: 0
-      right: 0
-      height: 1rem 
-      width: 100%
-      background: red
-      transform: skew(0deg, -6deg)
-    
-    &:after 
-      content: $blank
-      position: absolute
-      top: 0
-      right: 0
-      height: 1rem
-      width: 100%
-      transform: skew(0deg, -6deg)
+    &.top
+      height: 0.2rem
+      background: v.$red4
+
+    &.middle
+      background: v.$yellow5
+
+    &.bottom
+      height: 0.2rem
+      background: v.$blue4
+
+    h1
+      margin: 0 auto
